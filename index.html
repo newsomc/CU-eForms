@@ -4,6 +4,8 @@
 <title>Drag Example</title>
 <script type="text/javascript" src="js/mootools-core-1.3-full-compat-yc.js"></script>
 <script type="text/javascript" src="js/mootools-more.js"></script>
+<script type= "text/javascript" src="js/sortables.js"></script>
+<script type= "text/javascript" src="js/pseudos-keys.js"></script>
 <script type= "text/javascript" src="js/custom.js"></script>
 <link href="css/form.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -15,37 +17,33 @@
       </h1>
     </div>
     <div id ="form-elements">
-      <div id ="form-tabs">
-        <div id ="add-field">
-          Add a Field
+      <div id="test">
+        <div id ="form-tabs">
+          <div id ="add-field" class='tab-open pressed' open='form-tools-one'>Add a Field</div>
+          <div id ="field-settings" class='tab-open' open='form-tools-two'>Field Settings</div>
+          <div id ="form-settings" class='tab-open' open='form-tools-three'>Form Settings</div>
+	    </div><!--end tabs-->
+	    <div id ="form-tools-one" class='form-space'>
+          <ul id ="column-one">
+			<li class ="single-line-text">Single line Text</li>
+			<li class ="paragraph-text">Paragraph Text</li>
+			<li class ="multiple-choice">Multiple Choice</li>
+			<li class ="section-break">Section Break</li>
+          </ul>
+          <ul id ="column-two">
+			<li class ="number">Number</li>
+			<li class ="checkboxes">Checkboxes</li>
+			<li class ="dropdown">Dropdown</li>
+			<li class ="page-break">Page Break</li>
+          </ul>
         </div>
-        <div id ="field-settings">
-          Field Settings
-        </div>
-        <div id ="form-settings">
-          Form Settings
-        </div>
-
-        <div id ="form-tools">
+        <div id ="form-tools-two" class="hidden tab">
           <ul id ="column1">
-	 	    <li class ="single-line-text">Single line Text</li>
-            <li class ="paragraph-text">Paragraph Text</li>
-		    <li class ="multiple-choice">Multiple Choice</li>
-            <li class ="section-break">Section Break</li>
-          </ul>
-          <ul id ="column2">
-	        <li class ="number">Number</li>
-		    <li class ="checkboxes">Checkboxes</li>
-	        <li class ="dropdown">Dropdown</li>
-	        <li class ="page-break">Page Break</li>
-          </ul>
-       </div>
-      </div>
+          <li class ="single-line-text">Single line Text</li>
+        </ul>
+       </div>  
+      </div><!-end Form Elements-->
     </div>
-    <div id ="form-canvas">
-		<div id="form-title">
-			My Untitled Form
-		</div>
-    </div>
+    <ul id ="form-canvas"></ul>
 </body>
 </html>

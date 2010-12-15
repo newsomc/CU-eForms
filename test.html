@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Keyboard Example</title>
+<script type="text/javascript" src="js/mootools-core-1.3-full-compat-yc.js"></script>
+<script type="text/javascript" src="js/mootools-more.js"></script>
+<script type= "text/javascript" src="js/sortables.js"></script>
+<script type= "text/javascript" src="js/custom.js"></script>
+<script type= "text/javascript" src="js/pseudos-keys.js"></script>
+<script type="text/javascript">
+window.addEvent('domready', function() {
+$$('#button').addEvent('click', function(){
+    alert('You clicked the button!');
+});
+  
+$$('#in').addEvent('keydown:keys(enter)', function(){
+    alert('You pressed the following keys: shift, a and b');
+});
+});
+
+</script>
+<link href="css/form.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+ <input id="in" type="text"/><br/>
+ <input id="button" type="button" value="hi!"/>
+</body>
+</html>
