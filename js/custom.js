@@ -1,7 +1,7 @@
 var sort;
 
 function getFormData(type) {
-	var req = new Request.HTML({url:'http://dyn-209-2-234-251.dyn.columbia.edu/~hcnewsom/CU-eForms/js/'+type+'.html', 
+	var req = new Request.HTML({url:'http://10.0.1.9/~hcnewsom/CU-eForms/js/'+type+'.html', 
 		append: $('form-canvas'),
 		onFailure: function() {
 			$('form-canvas').set('text', 'The request failed.');
@@ -16,17 +16,14 @@ function onFormData() {
 	$$('.label').addEvent('click', function(e){	
 	    $(this).addClass('hidden');
 		var openClass = $(this).getNext('.label-input');
+		//var openClass = $(this).getElements('.label-input');
 		openClass.setStyle('opacity', 0);
 		openClass.removeClass('hidden');
 		openClass.fade('in');
-		openClass.setStyle('background-color', '#fff6db');
+		openClass.setStyle('background-color', '#fff6db');			
 	});	
-	keyEnter($$('.label-input'));
-}
-
-function keyEnter(element){	
-	element.addEvent('keydown:keys(enter)', function(){
-		alert("you pressed enter");
+	$$('.label-input').addEvent('keydown:keys(enter)', function(){
+		$(this).setStyle('background-color', 'red');
 	});
 }
 
@@ -65,6 +62,7 @@ window.addEvent('domready', function() {
 			console.log(element);
 		});
 		var openIdentifier = '#' + $$(this).get('open')[0];
+		console.log(openIdentifier);
 		$$(openIdentifier).fade('in');
 	});
 				
