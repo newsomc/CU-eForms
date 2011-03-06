@@ -15,15 +15,23 @@
       <h1 id ="brand">
 	Columbia University E-Forms
       </h1>
-    </div>
+	  <div id="header-tabs-container">
+		<div id="header-tabs">
+		  <div class="header-tab header-pressed" id="worflow">Build Form</div>
+          <div class="header-tab" id="worflow">Add Workflow</div>
+	      <div class="header-tab" id="print">Print Your Form!</div>
+      	</div>
+	  </div>
+	</div>
+	<!--add new div that allows us to switch out content-->
     <div id ="form-elements">
-      <div id="test">
-        <div id ="form-tabs">
-          <div id ="add-field" class='tab-open pressed' open='form-tools-one'>Add a Field</div>
-          <div id ="field-settings" class='tab-open' open='form-tools-two'>Field Settings</div>
-          <div id ="form-settings" class='tab-open' open='form-tools-three'>Form Settings</div>
-	    </div><!--end tabs-->
-	    <div id ="form-tools-one" class='form-space'>
+      <div id ="form-tabs">
+        <div id ="add-field" class='tab-open pressed' open='form-tools-one'>Add a Field</div>
+        <div id ="field-settings" class='tab-open' open='form-tools-two'>Field Settings</div>
+        <div id ="form-settings" class='tab-open' open='form-tools-three'>Form Settings</div>
+	  </div><!--end tabs-->
+	  <div id="test">   
+	    <div id ="form-tools-one" class='tab'>
           <ul id ="column-one">
 			<li class ="single-line-text">Single line Text</li>
 			<li class ="paragraph-text">Paragraph Text</li>
@@ -38,8 +46,27 @@
           </ul>
         </div>
         <div id ="form-tools-two" class="hidden tab">
-          <p>Test!</p>
+          <ul id ="column-one">
+			<li class ="single-line-text">Teddy Bears</li>
+			<li class ="paragraph-text">Babies!</li>
+			<li class ="multiple-choice">Hairy legs!</li>
+			<li class ="section-break">George Washington</li>
+          </ul>
+		  <ul id ="column-two">
+			<li class ="number">Coolness</li>
+			<li class ="checkboxes">Black</li>
+			<li class ="dropdown">White</li>
+			<li class ="page-break">Orange</li>
+          </ul>
        </div>  
+	   <div id ="form-tools-three" class="hidden tab">
+       	  <ul id ="column-two">
+			<li class ="number">Coolness</li>
+			<li class ="checkboxes">Black</li>
+			<li class ="dropdown">White</li>
+			<li class ="page-break">Orange</li>
+          </ul>
+		</div>
       </div><!-end Form Elements-->
     </div>
     <ul id ="form-canvas"></ul>

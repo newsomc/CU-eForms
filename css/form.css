@@ -10,18 +10,47 @@
 #header{
   font-family: Helvetica;
   width: 965px;
-  height: 100px;
+  height: 149px;
   border: 1px solid black;
   background-color: #cbe6f2;
   color: #3985a8;
   text-shadow: 0 1px #fff;
 }
+#header-tabs-container{
+  float: right;
+}
+
+.header-tab{
+  float: left;
+  background-color: white;
+  background-position: 2px -3px !important;
+  border: 1px solid #aba;
+  border-radius: 4px;
+  border-bottom: none;
+  padding: 9px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  -webkit-box-shadow: -2px -2px 4px rgba(0,0,.3);
+
+}
+
+.header-pressed{
+  color: #3985a8;
+  text-shadow: 0 1px #fff;
+  background-color: #cbe6f2;	
+  padding: 9px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
 
 #brand{
   padding-top: 33px;
   padding-left: 10px;
 }
 
+
+/*TODO! Rename this element!*/
 #test{
   height: 300px;
   
@@ -70,7 +99,8 @@
   background-color: #cbe6f2;
 }
 
-#form-tools-one{
+#form-tools-one{ 
+ position: absolute;
  background-color: #fff6db;
  border: 1px solid #aba;
  height: 100%;
@@ -82,27 +112,62 @@
  -moz-box-shadow:inset 0 0 4px #000000;
  -webkit-box-shadow:inset 0 0 20px #bfbfbf;
  box-shadow:inset 0 0 4px #000000;
+ width: 326px;
+ height: 300px;
 }
+
+#form-tools-two{
+ position: absolute;
+ padding-left: 5px;
+ background-color: #fff6db;
+ border: 1px solid #aba;
+ height: 100%;
+ margin-top: 33px;
+ margin-left: 7px; 
+ margin-right: 5px; 
+ -webkit-border-bottom-left-radius: 5px;
+ -webkit-border-bottom-right-radius: 5px;
+ -moz-box-shadow:inset 0 0 4px #000000;
+ -webkit-box-shadow:inset 0 0 20px #bfbfbf;
+ box-shadow:inset 0 0 4px #000000;
+ width: 326px;
+ height: 300px;
+}
+
+#form-tools-three{
+ position: absolute;
+ padding-left: 5px;
+ background-color: #fff6db;
+ border: 1px solid #aba;
+ height: 100%;
+ margin-top: 33px;
+ margin-left: 7px; 
+ margin-right: 5px; 
+ -webkit-border-bottom-left-radius: 5px;
+ -webkit-border-bottom-right-radius: 5px;
+ -moz-box-shadow:inset 0 0 4px #000000;
+ -webkit-box-shadow:inset 0 0 20px #bfbfbf;
+ box-shadow:inset 0 0 4px #000000;
+ width: 326px;
+ height: 300px;
+}
+
 /*
 	Form Tools Buttons.
 */
-
 
 #form-tools-one ul{
   list-style: none;
   float: left;
   padding-bottom: 4px;
   padding-left: 13px;
-  
 }
 
 #form-tools-two ul{
-  clear: both;
   list-style: none;
   float: left;
   padding-bottom: 4px;
   padding-left: 8px;
-  
 }
 
 #form-tools-one ul li{
@@ -128,6 +193,31 @@
   margin-bottom: 8px;
 }
 
+#form-tools-two ul li{
+  margin: 0;
+  background: #eee;
+  background: -moz-linear-gradient(0% 100% 90deg, #bfbfbf, #eee);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#bfbfbf));
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0 0 5px #f5f5f5;
+  -webkit-box-shadow: inset 0 0 5px #f5f5f5;
+  box-shadow: inset 0 0 5px #f5f5f5;
+  color: #333;
+  font-family: "lucida grande", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0px #eee;
+  width: 144px;
+  margin-bottom: 8px;
+}
+
+
 #form-tools-one ul li:hover{
   background: #dfdfdf;
   background: -moz-linear-gradient(0% 100% 90deg, #aaa, #dfdfdf);
@@ -142,7 +232,6 @@
   background: #bfbfbf;
   background: -moz-linear-gradient(0% 100% 90deg, #eee, #bfbfbf);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bfbfbf), to(#eee));
-
 }
 
 /*
@@ -165,29 +254,38 @@
   User-defined form settings. 
 */
 #form-title{
- padding: 15px;
- border: 1px dotted #cbe6f2;
- background-color: #e3f0f2;
- border-radius: 4px; 
- margin-bottom: 10px;	
+  padding: 15px;
+  border: 1px dotted #cbe6f2;
+  background-color: #e3f0f2;
+  border-radius: 4px; 
+  margin-bottom: 10px;	
 }
 
-
 .form-elem{
- padding: 10px;
-
+  padding: 5px;
+  padding-top: 2px;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom:5px;
 }
 
 .form-elem:hover{
  border: 1px dashed black;
  list-style: none;
  cursor: move;
+ padding: 5px;
+ padding-top: 2px;
+ padding-bottom: 15px;
+ margin-top: 10px;
+ margin-bottom:5px;
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
 }
 
 .user-form-paragraph-text{
   width: 400px;
-  resize: none;
-	
+  resize: none;	
 }
 
 .user-form-multiple-choice{
@@ -196,8 +294,7 @@
 }
 
 .user-form-single-line-text{
-  width: 200px;
-	
+  width: 200px;	
 }
 
 .hidden{
@@ -208,10 +305,15 @@
   color: #3985a8;
   text-shadow: 0 1px #fff;
   cursor:text;
-	
 }
 
 .label-input{
   margin-left: 0px;
   padding-left: 0px;
+}
+
+.editFieldButton{
+  font-size: 12px;
+  color:#3985a8;
+  float: right;	
 }
