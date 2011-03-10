@@ -1,0 +1,9 @@
+===================
+TODO:
+===================
+
+1. Fix Tools tabs. Tab 3 fades when it shouldn't on first click. 
+2. Make cursor focus in on tab. 
+3. Clean up menu background size on tab click.
+
+ 

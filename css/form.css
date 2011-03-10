@@ -5,7 +5,6 @@
   font-family: monaco;
   margin: 0 auto; 
   width: 975px;
-
 }
 #header{
   font-family: Helvetica;
@@ -312,7 +311,7 @@
   padding-left: 0px;
 }
 
-.editFieldButton{
+.edit-field-button{
   font-size: 12px;
   color:#3985a8;
   float: right;	

@@ -33,14 +33,39 @@ function onFormData() {
         test = label.set('text', inputValue);
 	});
 	
+	var formElem = $$('.form-elem');
+
+	formElem.addEvents({
+	   mouseover: function(){
+	     $$('.edit-field-button').removeClass('hidden');
+	   },
+	   mouseout: function(){
+		 $$('.edit-field-button').addClass('hidden');
+	   },
+	   click: function(){
+		 var myFx = new Fx.Tween(this);
+		 myFx.set('background-color', '#CBE6F2');
+		 $$('.edit-field-button').removeClass('hidden');
+	   }	
+	});
+	
 	//List element interaction. TODO: needs to be set to toggle.
-	$$('.editFieldButton').addEvent('click', function(){
-	  	var thisElem = $(this).getParent('.form-elem');
-	    var myFx = new Fx.Tween(thisElem);
-		myFx.set('background-color', '#f00');	
-		console.log($$('#form-tools-two'));
-		$$('#form-tools-two').get('open')[0];
+	$$('.edit-field-button').addEvent('click', function(){
+
+       	$$('.tab-open').each(function(element, selector){
+			$$(element).removeClass('pressed');
+		});
+		
+		$$('.tab').each(function(element, selector) {
+			$$(element).fade('out');
+			$$(element).removeClass('hidden');
+			console.log(element);
+		});
+		var openIdentifier = $$('#form-tools-two').get('open')[0];
+		console.log(openIdentifier);
+		$$(openIdentifier).fade('in');
 		$$('#form-tools-two').fade('in');
+		$$("#field-settings").addClass('pressed');
 	});
 }
 
